@@ -20,7 +20,6 @@ exports.getHome = (req, res, next) => {
 };
 
 exports.registerUser = (req, res, next) => {
-  console.log(req);
   User.create({
     name,
     age,

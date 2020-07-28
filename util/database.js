@@ -1,7 +1,9 @@
 const Sequelize = require("sequelize");
+const credentials=require('./credentials');
 
-const sequelize = new Sequelize("yourstage", "root", "root", {
-  dialect: "mysql",
-  host: "127.0.0.1",
+const sequelize = new Sequelize(credentials.db,credentials.user,credentials.password,{
+    dialect:"mysql",
+    host: credentials.host,
+    port:3306
 });
 module.exports = sequelize;
